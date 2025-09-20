@@ -1,24 +1,34 @@
-public class IceCream {
-    private String name;
-    private float price;
-    private String brand;
-    private int calories;
-    private boolean madeWithJuice;
+public class IceCream extends ColdDessert{
+    public String coneFlavor;
 
-    public IceCream(String name, float price, String brand, int calories) {
-        this.name = name;
-        this.price = price;
-        this.brand = brand;
-        this.calories = calories;
+
+    public IceCream(String brand, String coneFlavor, String flavor) {
+        super(9F,brand, 1.2F, 0.7F, 1.3F, 0.8F, 1.5F, flavor);
+        this.coneFlavor = coneFlavor;
+    }
+
+    @Override
+    public ColdDessert clone() {
+        return null;
+    }
+
+    public IceCream(IceCream ic) {
+        super(ic);
+        this.coneFlavor = ic.coneFlavor;
     }
 
     @Override
     public String toString() {
         return "IceCream{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
+                "highWeight=" + highWeight +
+                ", lowWeight=" + lowWeight +
+                ", priceModifierHigh=" + priceModifierHigh +
+                ", priceModifierLow=" + priceModifierLow +
+                ", flavor='" + flavor + '\'' +
+                ", weight=" + weight +
                 ", brand='" + brand + '\'' +
-                ", calories=" + calories +
+                ", price=" + price +
+                ", coneFlavor='" + coneFlavor + '\'' +
                 '}';
     }
 }

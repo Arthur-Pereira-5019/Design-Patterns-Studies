@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
 public class Cart {
-    private ArrayList<ColdDesserts> cart = new ArrayList<>();
+    private ArrayList<ColdDessert> cart = new ArrayList<>();
 
-    public void addToTheCart(ColdDesserts cd, int times, Option o) {
-        //TODO: Cloning
+    public void addToTheCart(ColdDessert cd, int times, Option o) {
+        cd = cd.pricingChange(o);
         //TODO: Compare
         //TODO: Add to the cart
     }
